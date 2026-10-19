@@ -1,33 +1,29 @@
-import { useMemo, useState } from 'react';
-import { ScrollView, View } from 'react-native';
-import { CardArt, Chip, EmptyState, Icon, Label, Metric, Pill, Screen, SectionHeader, Surface, styles } from '../../components/ui';
-import { getPrintingContext } from '../../data/mock';
-import { usePreview } from '../../state/preview';
+import { CardArtwork } from '../../components/CardArtwork';
+import { useState } from 'react';
+import { ActivityIndicator, Pressable, TextInput, View } from 'react-native';
+import { Button, EmptyState, Label, Screen, SectionHeader, Surface, styles } from '../../components/ui';
+import { CardDetails, inputStyle } from '../../components/catalog';
+import type { SavedCopy } from '../../domain/live';
+import { variantLabel } from '../../domain/live';
+import { useVault } from '../../state/vault';
 import { colors } from '../../theme/tokens';
 
-type Filter = 'all' | 'identified' | 'review';
 export default function CollectionScreen() {
-  const { catalog, copies, compactRows, showCatalogNotes } = usePreview();
-  const [filter, setFilter] = useState<Filter>('all');
-  const [newestFirst, setNewestFirst] = useState(true);
-  const visible = useMemo(() => [...copies].filter((copy) => filter === 'all' || (filter === 'identified' ? copy.identification.status === 'identified' : copy.identification.status !== 'identified'))
-    .sort((a, b) => (newestFirst ? -1 : 1) * (a.acquisition.date ?? '').localeCompare(b.acquisition.date ?? '')), [copies, filter, newestFirst]);
-  const identified = copies.filter((copy) => copy.identification.status === 'identified').length;
-  return <Screen title="Collection" subtitle="Individual cards. A collection that’s yours.">
-    <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 12 }}><Metric label="Physical copies" value={String(copies.length)} caption="Preview objects only" icon="albums-outline" /><Metric label="Identified variants" value={String(identified)} caption="Synthetic identifications" icon="checkmark-circle-outline" /><Metric label="Needs review" value={String(copies.length - identified)} caption="Printing or variant unknown" icon="scan-outline" /></View>
-    <View style={{ gap: 14 }}><ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }}><Chip label="All copies" selected={filter === 'all'} onPress={() => setFilter('all')} /><Chip label="Identified" selected={filter === 'identified'} onPress={() => setFilter('identified')} /><Chip label="Needs review" selected={filter === 'review'} onPress={() => setFilter('review')} /><Chip label={newestFirst ? 'Newest first' : 'Oldest first'} selected={false} onPress={() => setNewestFirst(!newestFirst)} /></ScrollView>
-    <SectionHeader title="Your preview binder" aside={`${visible.length} copies`} />
-    {visible.length === 0 ? <EmptyState title="No copies in this view" description="Switch filters to see the sample collection." icon="albums-outline" /> : visible.map((copy) => {
-      const printing = catalog.printings.find((item) => item.id === copy.identification.printingId);
-      const context = printing ? getPrintingContext(printing) : null;
-      const variant = catalog.variants.find((item) => item.id === copy.identification.variantId);
-      return <Surface key={copy.id} style={{ padding: compactRows ? 12 : 16 }}><View style={[styles.row, { alignItems: 'flex-start', gap: 15 }]}>
-        {printing && context ? <CardArt small number={printing.collectorNumber ?? '—'} element={context.element} /> : <View style={{ width: 52, height: 68, alignItems: 'center', justifyContent: 'center', borderRadius: 8, borderWidth: 1, borderStyle: 'dashed', borderColor: colors.border }}><Icon name="help-outline" color={colors.subtle} /></View>}
-        <View style={{ flex: 1, minWidth: 0, gap: 5 }}><Label style={{ fontWeight: '600', fontSize: 15 }}>{printing?.nativeName ?? 'Unidentified card'}</Label><Label muted style={{ fontSize: 11 }}>{context ? `${context.language.name} · ${variant?.attributes.finish?.join(', ') ?? 'Variant unknown'}` : 'Language and printing unknown'}</Label>{!compactRows ? <Label muted style={{ fontSize: 11 }}>{copy.location ?? 'No location'} · {copy.acquisition.date}</Label> : null}
-        {showCatalogNotes ? <Label muted style={{ fontSize: 10 }}>Mock copy · {copy.id.slice(-4)}</Label> : null}</View>
-        <Pill label={copy.identification.status === 'identified' ? 'Identified' : 'Review'} tone={copy.identification.status === 'identified' ? 'accent' : 'gold'} />
-      </View></Surface>;
-    })}</View>
-    <Surface><View style={styles.row}><Icon name="shield-checkmark-outline" color={colors.accent} /><Label style={{ flex: 1, fontWeight: '600' }}>Your copies are separate from the catalog</Label></View><Label muted style={{ marginTop: 10 }}>Catalog updates cannot delete collection records. This preview is read-only and does not save real ownership data.</Label></Surface>
+  const vault = useVault(); const [query, setQuery] = useState(''); const [selected, setSelected] = useState<SavedCopy | null>(null);
+  const needle = query.trim().toLocaleLowerCase();
+  const visible = vault.copies.filter(item => [item.card.name, item.card.collectorNumber ?? '', item.card.language, item.card.setName].some(s => s.toLocaleLowerCase().includes(needle)));
+  return <Screen mode="live" title="Collection" subtitle="Your physical copies, saved on this device.">
+    <Surface><Label>{vault.ready ? `${vault.copies.length} physical ${vault.copies.length === 1 ? 'copy' : 'copies'}` : 'Loading saved copies…'} · one record per object</Label><Label muted>Saved card snapshots remain here even when TCGdex is unavailable. Local storage is not a cloud backup. No mock copies are imported.</Label></Surface>
+    <TextInput accessibilityLabel="Search collection" placeholder="Name, card number, set or language" placeholderTextColor={colors.muted} value={query} onChangeText={setQuery} style={inputStyle} />
+    {!vault.ready && !vault.error ? <ActivityIndicator color={colors.accent} accessibilityLabel="Loading local collection" /> : null}
+    {vault.error ? <Surface><Label accessibilityRole="alert">{vault.error}</Label><Button label="Retry local storage" onPress={() => void vault.reload()} /></Surface> : null}
+    <SectionHeader title="Your binder" aside={vault.ready ? `${visible.length} ${visible.length === 1 ? 'copy' : 'copies'}` : 'Loading…'} />
+    {visible.map(item => {
+      const variant = item.card.variants.find(v => v.id === item.copy.identification.variantId);
+      return <Pressable key={item.copy.id} accessibilityRole="button" accessibilityLabel={`Edit ${item.card.name} copy ${item.copy.id.slice(-4)}`} onPress={() => setSelected(item)}><Surface style={{ padding: 14 }}><View style={[styles.row, { alignItems: 'flex-start' }]}><CardArtwork key={item.card.image} card={item.card} small /><View style={{ flex: 1, gap: 6 }}><Label style={{ fontWeight: '700' }}>{item.card.name}</Label><Label muted>{item.card.language} · {item.card.setName} · #{item.card.collectorNumber ?? 'unnumbered'}</Label><Label muted>{variant ? variantLabel(variant) : 'Variant unknown'}</Label><Label>{item.copy.condition?.replaceAll('-', ' ') ?? 'Condition unknown'}</Label><Label muted style={{ fontSize: 10 }}>Physical copy {item.copy.id.slice(-8)}</Label></View></View></Surface></Pressable>;
+    })}
+    {vault.ready && visible.length === 0 ? <EmptyState title={vault.copies.length ? 'No matching copies' : 'Start your collection'} description="Open a real card in the Pokédex, choose its variant and condition, then add your physical copy." icon="albums-outline" /> : null}
+    <Button label="Browse cards to add" href="/pokedex" />
+    {selected ? <CardDetails key={selected.copy.id} card={selected.card} saved={selected} onClose={() => setSelected(null)} /> : null}
   </Screen>;
 }

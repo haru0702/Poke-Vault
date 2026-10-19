@@ -86,3 +86,27 @@ The relational schema above remains a future design, not an implemented database
 ### Sprint 0B completion verification — 2026-10-19
 
 The shared `Screen` now places its mock badge and synthetic-data/no-live-prices notice outside the scrolling content; presentation switches cannot hide this provenance boundary. Confirmed with a scrolled mobile browser preview. Catalog/pricing remain offline mock contracts; personal-copy persistence and production provider synchronization are not implemented. Actual command and platform validation is recorded in [Sprint 0B results](sprint-0b.md).
+
+## Sprint 1 implementation update — 2026-10-19
+
+A `LiveCatalogProvider` browsing contract extends the original catalog boundary. `TCGdexProvider` discovers language-scoped series, reads their set membership, excludes the `tcgp` digital series, loads paged card briefs and fetches full card details with bounded workers, abort propagation and request timeouts. The generic `getCard` transport also verifies the containing set is physical. Partial index/card failures produce warnings; unsupported endpoints and malformed responses produce errors; there is no mock fallback. An in-memory detail cache is bounded and is not an offline catalog database.
+
+The `CatalogCard` client projection in `src/domain/live.ts` contains native name, text collector number, language/release/set/era references, artwork, rarity, card properties, abilities/effects/attacks and provider provenance. It reuses `CardVariant` and `OwnedCopy`; it is not an implementation of the full relational schema. Normalized records omit pricing. Provider variant IDs are scoped to parent card and locale; rarity never creates a variant. Legacy booleans are displayed only as hints.
+
+`VaultStore` uses AsyncStorage and random UUIDs allocated through Expo Crypto. The versioned canonical identity registry (`pokevault:catalog-identities:v1`) is separate from the personal-copy document (`pokevault:user-vault:v1`). Identity registration can read an earlier combined document to retain allocated UUIDs but never rewrites that document. Personal add/edit/remove transactions are serialized within the store, validated and acknowledged only after storage writes succeed. Each physical copy has its own UUID and embedded card snapshot so provider failures cannot erase its identification. A matching add is rejected unless additional-copy intent is explicit. Corrupt/newer-version storage is preserved and errors are visible.
+
+`VaultProvider` hydrates the collection asynchronously; all five existing tabs use it. Card detail and copy-editor modals share a source notice and variant/condition selectors. Fixed source labeling remains visible; only explicit historical preview components may label themselves mock. Source/provider locale aliases and canonical language tags are separate. Full offline catalog caching, cross-provider identity reconciliation, cloud synchronization, backups/export, multi-tab conflict resolution, secure/encrypted storage and database migrations remain future work. AsyncStorage namespaces are local to an app install/browser origin. Web write serialization is within one app instance, not a multi-tab transaction protocol.
+
+Historical architecture and audit statements above are preserved as dated proposals/findings. [Sprint 1 results](sprint-1.md) distinguish unit tests, live browser checks, bundle validation and unperformed device QA.
+
+## 2026-10-19 — Sprint 1 artwork fix
+
+Added shared artwork resolution and rendering across catalog, collection and details, with loading, missing-provider and failed-load states, documented format retries, stable frames and regression tests. See [artwork fix report](sprint-1-artwork-fix.md) for evidence, validation and remaining device QA. Historical audit findings remain unchanged.
+
+### 2026-10-19 — Reviewed artwork supplementation
+
+Four English first-page omissions now use explicit, guarded Pokémon TCG API historical image mappings with on-screen attribution. Browser loading verified; native device behavior and two Trainer Kit replacements remain unresolved. No provider identity or collection data is rewritten. See [recovery evidence and limitations](sprint-1-artwork-fix.md#browser-verified-recovery--2026-10-19-supersedes-the-preceding-recovery-conclusion).
+
+### 2026-10-19 — Trainer Kit artwork recovery
+
+Added exact English Skitty and Glameow 1/30 Pooka mappings for local personal, noncommercial use, with source attribution and recorded terms scope. Both catalog/detail images verified in browser; public/commercial use needs separate review and native device behavior remains unverified. All six originally reported first-page omissions are now resolved in the browser sample. See [updated artwork report](sprint-1-artwork-fix.md).

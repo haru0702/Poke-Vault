@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ex10-!",
+    "name": "Unown",
+    "number": "!",
+    "artist": "Kyoko Koizumi",
+    "images": {
+      "small": "https://images.pokemontcg.io/ex10/!.png",
+      "large": "https://images.pokemontcg.io/ex10/!_hires.png"
+    },
+    "attacks": [
+      {
+        "name": "Hidden Power",
+        "cost": [
+          "Colorless"
+        ],
+        "convertedEnergyCost": 1,
+        "damage": "",
+        "text": "Flip a coin. If heads, put 2 damage counters on 1 of your opponent's Pok\u00e9mon. If tails, put 2 damage counters on 1 of your Pok\u00e9mon."
+      }
+    ],
+    "hp": "60"
+  },
+  {
+    "id": "ex10-?",
+    "name": "Unown",
+    "number": "?",
+    "artist": "Kyoko Koizumi",
+    "images": {
+      "small": "https://images.pokemontcg.io/ex10/question.png",
+      "large": "https://images.pokemontcg.io/ex10/question_hires.png"
+    },
+    "attacks": [
+      {
+        "name": "Hidden Power",
+        "cost": [
+          "Colorless"
+        ],
+        "convertedEnergyCost": 1,
+        "damage": "",
+        "text": "Choose a card from your hand and put it face down. Your opponent guesses if the card is a Pok\u00e9mon, Trainer, or Energy card. Reveal the card. If your opponent guessed wrong, draw 2 cards. Put the card back into your hand."
+      }
+    ],
+    "hp": "60"
+  }
+]

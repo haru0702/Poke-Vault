@@ -1,0 +1,25 @@
+[
+  {
+    "id": "sm35-1",
+    "name": "Bulbasaur",
+    "number": "1",
+    "artist": "Mizue",
+    "images": {
+      "small": "https://images.pokemontcg.io/sm35/1.png",
+      "large": "https://images.pokemontcg.io/sm35/1_hires.png"
+    },
+    "attacks": [
+      {
+        "name": "Razor Leaf",
+        "cost": [
+          "Grass",
+          "Colorless"
+        ],
+        "convertedEnergyCost": 2,
+        "damage": "30",
+        "text": ""
+      }
+    ],
+    "hp": "70"
+  }
+]

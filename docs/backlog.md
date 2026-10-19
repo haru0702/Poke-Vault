@@ -58,3 +58,29 @@ Next integration priority: verify release/language applicability and curated she
 ### Sprint 0B completion review — 2026-10-19
 
 FND-002 mock provenance is now fixed above scrolling content. The existing 24 tests, TypeScript, lint, web export and iOS/Android bundle exports passed; browser checks exercised all tabs and 320/768/1280 px page widths. Added the previously missing [Sprint 0B handoff](sprint-0b.md) with current screenshots and actual limitations. Physical-device acceptance remains open and must not be marked done from bundle export. All 194 protected Sprint 0A files passed hash verification unchanged.
+
+## Sprint 1 review handoff — 2026-10-19
+
+| Item | Status | Result / remaining scope |
+| --- | --- | --- |
+| S1-001 | Implemented | Reusable live TCGdex discovery/search provider, physical-series filtering, timeouts/cancellation, partial errors and bounded request workers. Full archival ingestion/reconciliation remains open. |
+| S1-002 | Implemented | Language, name, collector-number, era, set and rarity filters; paged cards and native text; no silent fallback. Language applicability/completeness still unverified. |
+| S1-003 | Implemented | Real artwork/details, missing-image states, detailed physical variants and legacy hints; no rarity-derived variant generation. |
+| S1-004 | Implemented | Local persistent physical-copy add/edit/remove, condition/variant editing, confirmation, duplicate guard and explicit additional-copy intent. No cloud backup/export or encrypted storage. |
+| S1-005 | Implemented | Random internal identity mapping persisted separately from personal-copy records; saved card snapshots survive provider changes. Full cross-provider reconciliation remains open. |
+| S1-006 | Validation recorded in handoff | Automated search/filter/identity/variant/storage/navigation tests plus web/native exports and live browser checks. Native physical-device acceptance remains open. |
+| S1-007 | Awaiting user review | Review [Sprint 1 handoff](sprint-1.md) and perform iPhone QA before deciding Sprint 2 scope. |
+
+Scanner, price tracking, paid integrations, production backend, multi-device sync and completeness certification remain deferred. Sprint 0A gaps/rights/release-registry work remains open. No Sprint 2 implementation has begun.
+
+## 2026-10-19 — Sprint 1 artwork fix
+
+Added shared artwork resolution and rendering across catalog, collection and details, with loading, missing-provider and failed-load states, documented format retries, stable frames and regression tests. See [artwork fix report](sprint-1-artwork-fix.md) for evidence, validation and remaining device QA. Historical audit findings remain unchanged.
+
+### 2026-10-19 — Reviewed artwork supplementation
+
+Four English first-page omissions now use explicit, guarded Pokémon TCG API historical image mappings with on-screen attribution. Browser loading verified; native device behavior and two Trainer Kit replacements remain unresolved. No provider identity or collection data is rewritten. See [recovery evidence and limitations](sprint-1-artwork-fix.md#browser-verified-recovery--2026-10-19-supersedes-the-preceding-recovery-conclusion).
+
+### 2026-10-19 — Trainer Kit artwork recovery
+
+Added exact English Skitty and Glameow 1/30 Pooka mappings for local personal, noncommercial use, with source attribution and recorded terms scope. Both catalog/detail images verified in browser; public/commercial use needs separate review and native device behavior remains unverified. All six originally reported first-page omissions are now resolved in the browser sample. See [updated artwork report](sprint-1-artwork-fix.md).

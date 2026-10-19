@@ -54,3 +54,9 @@ export interface PreviewDataSource {
   readonly sets: readonly CardSet[];
   readonly printings: readonly Printing[];
 }
+
+/** Client browsing contract, independent of TCGdex's transport and record keys. */
+export interface LiveCatalogProvider extends CatalogProvider {
+  index(locale: string, signal?: AbortSignal): Promise<import('../domain/live').CatalogIndex>;
+  search(locale: string, index: import('../domain/live').CatalogIndex, query: import('../domain/live').CardQuery, page: number, signal?: AbortSignal): Promise<import('../domain/live').CardPage>;
+}

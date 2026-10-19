@@ -48,15 +48,15 @@ export function Chip({ label, selected, onPress }: { label: string; selected: bo
 export function Metric({ label, value, caption, icon }: { label: string; value: string; caption: string; icon: IconName }) {
   return <Surface style={{ flex: 1, minWidth: 145, padding: 18 }}><View style={styles.rowBetween}><Label muted style={{ fontSize: 12 }}>{label}</Label><Icon name={icon} size={17} color={colors.subtle} /></View><Text style={styles.metric}>{value}</Text><Label muted style={{ fontSize: 11 }}>{caption}</Label></Surface>;
 }
-export function Screen({ title, subtitle, children }: PropsWithChildren<{ title: string; subtitle: string }>) {
+export function Screen({ title, subtitle, children, mode = 'mock' }: PropsWithChildren<{ title: string; subtitle: string; mode?: 'mock' | 'live' }>) {
   return <SafeAreaView edges={['top', 'left', 'right']} style={styles.safeArea}>
-    <Head><title>{`PokéVault · ${title}`}</title><meta name="description" content="PokéVault offline collection preview. Synthetic data; catalog coverage is unverified." /></Head>
+    <Head><title>{`PokéVault · ${title}`}</title><meta name="description" content="PokéVault personal collection. Catalog coverage is unverified." /></Head>
     <View style={styles.container}>
         <View style={styles.brandRow}>
           <View style={styles.brand}><View style={styles.brandIcon}><Icon name="albums-outline" size={18} color={colors.accent} /></View><Text style={styles.brandText}>PokéVault</Text></View>
-          <View style={styles.preview}><View style={styles.statusDot} /><Text style={styles.previewText}>MOCK DATA</Text></View>
+          <View style={styles.preview}><View style={styles.statusDot} /><Text style={styles.previewText}>{mode === 'mock' ? 'MOCK DATA' : 'LIVE CATALOG'}</Text></View>
         </View>
-        <View style={styles.mockNotice}><Icon name="flask-outline" size={15} color={colors.accent} /><Label style={styles.mockNoticeText}>Offline preview · synthetic cards and copies · no live prices</Label></View>
+        <View style={styles.mockNotice}><Icon name="flask-outline" size={15} color={colors.accent} /><Label style={styles.mockNoticeText}>{mode === 'mock' ? 'Offline preview · synthetic cards and copies · no live prices' : 'TCGdex catalog · local collection · coverage unverified · no pricing'}</Label></View>
     </View>
     <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
       <View style={styles.container}>

@@ -1,0 +1,69 @@
+{
+  "observedAt": "2026-10-19T04:45:24.794076+00:00",
+  "entries": [
+    {
+      "url": "https://raw.githubusercontent.com/PokemonTCG/pokemon-tcg-data/master/cards/en/ex10.json",
+      "file": "ex10-selected.json",
+      "sourceResponseSha256": "a6369d6bea09dc1e08d040d11b048b44a0b911055de74bc116bcd8e912b82d0b",
+      "note": "Selected fields only, not raw full response"
+    },
+    {
+      "url": "https://images.pokemontcg.io/ex10/!_hires.png",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://images.pokemontcg.io/ex10/question_hires.png",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PokemonTCG/pokemon-tcg-data/master/cards/en/sm75.json",
+      "file": "sm75-selected.json",
+      "sourceResponseSha256": "7ca170146df7c9f0bf456c9b099a17acfe895bc755e9895e9c2a8bf82da6607c",
+      "note": "Selected fields only, not raw full response"
+    },
+    {
+      "url": "https://images.pokemontcg.io/sm75/1_hires.png",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PokemonTCG/pokemon-tcg-data/master/cards/en/sm35.json",
+      "file": "sm35-selected.json",
+      "sourceResponseSha256": "84dd32837cf89080a07f25b6d293dbe86b245f4cfdf816c3a60a31d8ab711dbe",
+      "note": "Selected fields only, not raw full response"
+    },
+    {
+      "url": "https://images.pokemontcg.io/sm35/1_hires.png",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://api.tcgdex.net/v2/en/cards/exu-%21",
+      "file": "exu-bang.json",
+      "sha256": "3f86478ec7c17b6ce15be783b4ec216854de6879c4130d3625c6f895f92c8199"
+    },
+    {
+      "url": "https://api.tcgdex.net/v2/en/cards/exu-%253F",
+      "file": "exu-_3F.json",
+      "sha256": "8c0ed411d3654d575395c30909585e476a4949cfe3fb8b910b7ba2bd20c07e99"
+    },
+    {
+      "url": "https://api.tcgdex.net/v2/en/cards/sm7.5-1",
+      "file": "sm7.5-1.json",
+      "sha256": "8c2433ab4f55b7fdf312af473b6e3f766fead94cacb8c40ae7adbd6e741d445a"
+    },
+    {
+      "url": "https://api.tcgdex.net/v2/en/cards/sm3.5-1",
+      "file": "sm3.5-1.json",
+      "sha256": "8fa6cf97b34d689db41f38e2abe89bcb69e50c4e77bf23da585dac15a6582d99"
+    },
+    {
+      "url": "https://api.tcgdex.net/v2/en/cards/tk-xy-latio-1",
+      "file": "tk-xy-latio-1.json",
+      "sha256": "cd00354ab824a5705b4124a6f9e335370a8be36022378f43b6fb1665d942de3b"
+    },
+    {
+      "url": "https://api.tcgdex.net/v2/en/cards/tk-xy-p-1",
+      "file": "tk-xy-p-1.json",
+      "sha256": "e043494ea0045a6e5eade79ddab0f9cb86b3057c18b295c06106ad9a8b60fe56"
+    }
+  ]
+}

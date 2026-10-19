@@ -15,3 +15,5 @@ npm-debug.log*
 
 expo-env.d.ts
 # @end expo-cli
+# Generated Sprint 1 browser previews stay local; textual QA evidence is versioned.
+docs/sprint-1-previews/*.png

@@ -1,0 +1,13 @@
+{
+  "auditDate": "2026-10-19",
+  "method": "Public source pages and in-app Chromium browser DOM image checks plus visual inspection of English text and printed collector number",
+  "scope": "Two specific English Trainer Kit printings, not global artwork coverage or manufacturing-variant verification",
+  "cards": [
+    {"tcgdexCardId":"tk-xy-latio-1","sourceCardId":"en-tk8a-1","sourcePage":"https://pooka.app/card/en-tk8a-1/Skitty","image":"https://cdn.pooka.app/card/en-tk8a-1.png","directNaturalWidth":500,"directNaturalHeight":699,"visualNumber":"1/30","visualName":"Skitty","visualLanguage":"English","loadedInCatalog":true,"loadedInDetails":true},
+    {"tcgdexCardId":"tk-xy-p-1","sourceCardId":"en-tk9b-1","sourcePage":"https://pooka.app/card/en-tk9b-1/Glameow","image":"https://cdn.pooka.app/card/en-tk9b-1.png","directNaturalWidth":500,"visualNumber":"1/30","visualName":"Glameow","visualLanguage":"English","loadedInCatalog":true,"loadedInDetails":true}
+  ],
+  "termsReview":{"url":"https://pooka.app/terms","section":"3. Content and Intellectual Property","effectiveDate":"2024-10-24","documentedScope":"Limited personal, non-commercial content use","limitation":"Not confirmation of rights for public redistribution, commercial launch or unrestricted CDN use; review before such use"},
+  "otherCandidate":{"sourcePage":"https://www.danireon.com/products/skitty-1-30-xy-trainer-kit-latias-latios","publishedImage":"https://www.danireon.com/cdn/shop/files/bd7121c1-60b0-4884-a37d-1637f9ef1dc1.jpg?v=1711390889","status":"Image URL observed in page metadata; visual match/reuse rights unverified; not integrated"},
+  "nativeDeviceTesting":"unverified",
+  "mediaRehosting":false
+}

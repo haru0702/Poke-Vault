@@ -51,3 +51,23 @@ The preview is read-only and offline. Real collection editing/persistence, produ
 ### Sprint 0B completion verification — 2026-10-19
 
 Reviewed the existing foundation and fixed the shared preview header so mock-data and no-live-prices labeling remains visible while scrolling. Five-tab browser navigation, responsive page widths, web startup/export, native JavaScript bundle exports and all 24 automated tests passed. Physical-device testing remains unperformed. See [Sprint 0B results](sprint-0b.md) for commands, evidence and qualified checks; no historical audit findings were changed.
+
+## Sprint 1 implementation update — 2026-10-19
+
+The user authorized replacement of the mock Pokédex with live TCGdex discovery/search, sourced card artwork/details, language/era/set/rarity/name/number controls and persistent local physical-copy add/edit/remove operations. The Sprint 0B read-only restriction above remains historical and is superseded for this scope. Mock copies are not migrated into the personal collection, and API failures never substitute preview fixtures.
+
+Each saved copy retains a card snapshot, canonical printing/variant UUIDs, language and condition. Matching add submissions are rejected unless the user deliberately chooses an additional physical copy; removal requires confirmation. Unknown variants and conditions remain unknown. Storage failures surface errors; unreadable/version-incompatible data is preserved. Local storage has no cloud backup or account synchronization and is not encrypted application-level storage.
+
+TCGdex coverage remains unverified; physical Pocket exclusion, empty catalogs/shells, missing images and partial requests have explicit states. Real data does not mean independently verified completeness. Scanning and pricing remain deferred. Sprint 2 is gated on review. See [Sprint 1 handoff](sprint-1.md) for actual validation and QA steps.
+
+## 2026-10-19 — Sprint 1 artwork fix
+
+Added shared artwork resolution and rendering across catalog, collection and details, with loading, missing-provider and failed-load states, documented format retries, stable frames and regression tests. See [artwork fix report](sprint-1-artwork-fix.md) for evidence, validation and remaining device QA. Historical audit findings remain unchanged.
+
+### 2026-10-19 — Reviewed artwork supplementation
+
+Four English first-page omissions now use explicit, guarded Pokémon TCG API historical image mappings with on-screen attribution. Browser loading verified; native device behavior and two Trainer Kit replacements remain unresolved. No provider identity or collection data is rewritten. See [recovery evidence and limitations](sprint-1-artwork-fix.md#browser-verified-recovery--2026-10-19-supersedes-the-preceding-recovery-conclusion).
+
+### 2026-10-19 — Trainer Kit artwork recovery
+
+Added exact English Skitty and Glameow 1/30 Pooka mappings for local personal, noncommercial use, with source attribution and recorded terms scope. Both catalog/detail images verified in browser; public/commercial use needs separate review and native device behavior remains unverified. All six originally reported first-page omissions are now resolved in the browser sample. See [updated artwork report](sprint-1-artwork-fix.md).

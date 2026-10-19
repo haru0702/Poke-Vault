@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-19",
+  "mode": "live-browser-not-native-device",
+  "englishIndex": {
+    "listedEras": 20,
+    "physicalSetCandidates": 205
+  },
+  "japaneseIndex": {
+    "listedEras": 14,
+    "physicalSetCandidates": 184
+  },
+  "combinedEnglishFilters": true,
+  "japaneseNativeText": true,
+  "emptyLanguageNoFallback": true,
+  "qaCopyAddEditReloadDuplicateRemoval": true,
+  "qaCopiesRemaining": 0,
+  "responsiveSprint": [
+    {
+      "width": 320,
+      "title": "Dashboard",
+      "document": 320,
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "title": "Pokédex",
+      "document": 320,
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "title": "Collection",
+      "document": 320,
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "title": "Portfolio",
+      "document": 320,
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "title": "Settings",
+      "document": 320,
+      "viewport": 320
+    },
+    {
+      "width": 768,
+      "title": "Dashboard",
+      "document": 768,
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "title": "Pokédex",
+      "document": 768,
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "title": "Collection",
+      "document": 768,
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "title": "Portfolio",
+      "document": 768,
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "title": "Settings",
+      "document": 768,
+      "viewport": 768
+    },
+    {
+      "width": 1280,
+      "title": "Dashboard",
+      "document": 1280,
+      "viewport": 1280
+    },
+    {
+      "width": 1280,
+      "title": "Pokédex",
+      "document": 1280,
+      "viewport": 1280
+    },
+    {
+      "width": 1280,
+      "title": "Collection",
+      "document": 1280,
+      "viewport": 1280
+    },
+    {
+      "width": 1280,
+      "title": "Portfolio",
+      "document": 1280,
+      "viewport": 1280
+    },
+    {
+      "width": 1280,
+      "title": "Settings",
+      "document": 1280,
+      "viewport": 1280
+    }
+  ]
+}

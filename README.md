@@ -1,63 +1,60 @@
 # PokéVault
 
-A mobile-first personal Pokémon TCG collection foundation built with **Expo SDK 57, Expo Router, React Native and TypeScript**. Sprint 0B provides five bottom tabs: Dashboard, Pokédex, Collection, Portfolio and Settings.
+A mobile-first Pokémon TCG collection application built with **Expo SDK 57, Expo Router, React Native and TypeScript**.
 
-**This is an offline mock preview.** Its printings, releases, variants and owned copies are synthetic examples, not an official checklist or your personal collection. No market prices are supplied. Catalog completeness remains **NO-GO**; the provider-independent foundation has a **CONDITIONAL GO**. See the [coverage matrix](docs/catalog-coverage-matrix.md).
+**Sprint 1:** the Pokédex browses real TCGdex eras, sets, cards, artwork and metadata. Your physical collection is stored locally with printing, language, optional variant and condition. API failures never fall back to mock cards. Catalog completeness remains **unverified / NO-GO for a universal completeness claim**; source records are not an independently reconciled official checklist.
 
-## Run
+Five dark-theme bottom tabs remain: Dashboard, Pokédex, Collection, Portfolio and Settings. Portfolio has no pricing or tracking. Scanning is not implemented. Review the [Sprint 1 handoff](docs/sprint-1.md) before Sprint 2.
 
-Use Node.js 24 LTS (verified with 24.18.0) and npm. SDK 57 was chosen using Expo's [current Expo Go transition guidance](https://docs.expo.dev/get-started/create-a-project/) (checked 2026-10-19); dependencies are pinned by `package-lock.json`.
+## Run on your Mac and iPhone
+
+Use Node.js 24 LTS and npm with the committed lockfile:
 
 ```sh
+cd "/Users/maryantoinetteabuela/Documents/ChatGPT/PokéVault"
 npm ci
-npm start
+npx expo start --go --lan
 ```
 
-Scan the terminal QR code with a compatible Expo Go installation, or use:
+Open the QR code with a compatible Expo Go client on your iPhone, with phone and Mac on the same Wi-Fi. Keep Terminal running. If necessary, sign in to Expo CLI and Expo Go with the same Expo account. For the browser:
 
 ```sh
-npm run ios       # needs an installed iOS simulator / Xcode
-npm run android   # needs an Android emulator or connected development device
-npm run web       # local browser preview
+npm run web
 ```
 
-No environment variables, production credentials, login, paid API account, EAS configuration or scanning permissions are needed. Initial dependency installation needs internet access. To start using installed dependencies without version checks:
+The Sprint 1 verification server uses [localhost:8083](http://localhost:8083). Run `EXPO_OFFLINE=1 npm run web -- --port 8083` to use that port without Expo dependency network checks; this does **not** disable the app's live TCGdex requests.
+
+No production credentials, API key, paid account or scanning permission is needed. Initial dependency installation and live catalog browsing require network access. Saved collection text/identity snapshots remain available without a provider connection; artwork is remotely hosted and may not be available offline.
+
+## Use
+
+- In Pokédex, choose a language, optionally filter by name/number/era/set/rarity, then press **Search catalog**. Number search preserves the provider's native numbering, including leading zeros. **Load more cards** retrieves another page.
+- Open a card for artwork, rules metadata and detailed variant candidates. Choose **Unknown / not identified** when its physical variant is not known; rarity is separate.
+- Choose condition and **Add to collection**. If a matching copy already exists, adding another requires explicitly enabling **Add another physical copy**.
+- Open a saved copy in Collection to edit variant/condition or remove it with confirmation. Copies are individual physical objects, not a combined quantity bucket.
+
+**Local-only storage:** browser data is scoped to the URL origin/port; native data is scoped to the app installation. Uninstalling/clearing site/app data may delete the collection. There is no cloud synchronization or backup/export feature yet. AsyncStorage is not encrypted application-level storage; do not store sensitive notes. Test changes at another port do not appear in your usual browser origin or on your iPhone.
+
+## Verification
 
 ```sh
-EXPO_OFFLINE=1 npm run web -- --port 8082
+npm run check
+npm run export:web
+npx expo export --platform ios --platform android --output-dir /tmp/pokevault-sprint1-native-reviewed
 ```
 
-## Verify
-
-```sh
-npm run check           # preserved audit hashes + TypeScript + zero-warning lint + tests
-npm run export:web      # production static route rendering and web bundle
-npx expo install --check
-npx expo export --platform ios --platform android --output-dir /tmp/pokevault-native-export
-```
-
-`npm test` includes unit tests for identity, reconciliation, coverage and provider limitations plus integration tests that press real Expo Router tab buttons and exercise search, filters and preferences. Tests use native mocks provided by `jest-expo`; passing them is not a physical-device test. Native bundle export is not an installable native binary. See [actual Sprint 0B verification](docs/sprint-0b.md).
+`check` verifies 194 protected Sprint 0A audit/evidence files, TypeScript, zero-warning ESLint and Jest tests. Tests use captured public response fixtures and controlled provider responses; this is separate from live browser testing. Native bundle export is not physical-device testing or an installable binary build. Actual results and manual QA are in [Sprint 1](docs/sprint-1.md).
 
 ## Structure
 
-- `src/app/`: root layout and the five Expo Router bottom-tab screens.
-- `src/components/ui.tsx`, `src/theme/`: reusable components, dark palette, responsive grids, safe-area-aware screens and abstract preview art.
-- `src/domain/`: branded internal UUID identities; species, eras, languages, markets, sets, regional releases, designs, printings, variants, copies and scoped price states; validated, non-destructive catalog upserts.
-- `src/providers/`: catalog/pricing/repository contracts and a synthetic offline provider; no production network integration.
-- `src/data/mock.ts`: explicitly synthetic fixtures and an extensible era/language vocabulary. Vocabulary presence does not certify card availability.
-- `src/state/`: read-only preview collection plus session-only display preferences.
-- `__tests__/`: domain, provider and real-router integration tests.
-- `docs/`: Sprint 0A audit, coverage evidence, requirements, architecture, backlog and Sprint 0B results.
-- `scripts/verify-audit.mjs`: checks 194 audit/evidence files against the pre-Sprint 0B baseline. Do not regenerate that baseline to hide changes.
+- `src/app/`: five-tab Expo Router application.
+- `src/components/`, `src/theme/`: shared dark UI, live tiles/artwork, searchable selectors and card/copy detail modals.
+- `src/providers/tcgdex.ts`, `contracts.ts`: provider-neutral browsing boundary and read-only TCGdex adapter; no pricing integration.
+- `src/domain/`: canonical UUIDs, foundational entities, live card projection and search/variant helpers.
+- `src/storage/vault.ts`: versioned persistent identity registry and user-only collection transactions.
+- `src/state/vault.tsx`: hydrated local collection state and error handling.
+- `src/data/mock.ts`, `src/providers/mock.ts`, `src/state/preview.tsx`: historical fixtures/preview helpers retained for tests; current tabs do not import mock ownership.
+- `__tests__/`: normalization, multilingual filters, variants, persistence, duplicate guards, failure cases and actual Expo Router navigation with controlled provider data.
+- `docs/`: preserved [catalog audit](docs/catalog-audit.md), [coverage matrix](docs/catalog-coverage-matrix.md), [architecture](docs/architecture.md), [backlog](docs/backlog.md), and dated [Sprint 0B](docs/sprint-0b.md)/[Sprint 1](docs/sprint-1.md) handoffs.
 
-## Boundaries
-
-The preview supports native/translated-name search, language/era filters, collection review filters and date sorting. The Settings switches affect catalog notes and compact collection rows for the current session; mock labels cannot be hidden. Portfolio shows copy-language distribution, not catalog-completion percentages, and leaves every price unknown.
-
-Personal-copy records are separate from catalog snapshots. `applyCatalogUpserts` accepts no personal collection and exposes no delete operation; omitted upstream records are retained. Production adapters must reconcile raw records into reviewed canonical upserts before calling it. This is an in-memory foundation, not a persisted synchronization service or a final database schema.
-
-Not implemented: real collection editing/persistence, authentication, production scanning, live catalog synchronization, paid integrations, market valuation, historical price charts, complete card coverage, app-store builds or deployment. Do not enter real collection data into this read-only demo.
-
-The project contains no Pokémon card scans. Visuals are abstract local UI shapes labeled preview art. Source data and image/market-feed rights must be reviewed before adding production assets.
-
-Completion review on 2026-10-19: the preview provenance header stays visible while scrolling. Current screenshots, exact commands and separate Jest/browser/native-bundle/device results are in [the Sprint 0B handoff](docs/sprint-0b.md). Physical-device testing remains open.
+Do not regenerate the audit baseline to conceal changes. No scanner, paid integration, price tracking, deployment or Sprint 2 work is included.

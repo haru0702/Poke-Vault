@@ -1,0 +1,15 @@
+{
+  "auditDate": "2026-10-19",
+  "method": "In-app Chromium browser: published image URLs, then rendered img complete/naturalWidth checks in localhost:8083/pokedex",
+  "results": [
+    {"cardId":"exu-!","url":"https://images.pokemontcg.io/ex10/!_hires.png","directNaturalWidth":600,"loadedInApp":true},
+    {"cardId":"exu-%3F","url":"https://images.pokemontcg.io/ex10/question_hires.png","directNaturalWidth":600,"loadedInApp":true},
+    {"cardId":"sm7.5-1","url":"https://images.pokemontcg.io/sm75/1_hires.png","directNaturalWidth":734,"loadedInApp":true},
+    {"cardId":"sm3.5-1","url":"https://images.pokemontcg.io/sm35/1_hires.png","directNaturalWidth":734,"loadedInApp":true},
+    {"cardId":"tk-xy-latio-1","source":"https://www.tcgplayer.com/product/98347","image":"https://tcgplayer-cdn.tcgplayer.com/product/image-missing.svg","decision":"Rejected: source placeholder, not card artwork"},
+    {"cardId":"tk-xy-p-1","source":"https://www.tcgplayer.com/product/118798","image":"https://tcgplayer-cdn.tcgplayer.com/product/118798_in_200x200.jpg","naturalWidth":281,"decision":"Research only: no confirmed app reuse permission; not integrated"}
+  ],
+  "scrydexAttempt":{"url":"https://api.scrydex.com/pokemon/v1/cards?q=name%3AGlameow%20number%3A1&page_size=5","status":401,"authentication":"none","decision":"No account, subscription or credentials created"},
+  "nativeDeviceTesting":"unverified",
+  "limits":"Browser success does not negate earlier CLI 403 responses or establish future availability, global coverage or variant-specific artwork. Direct image resources expose no status in the DOM check, so HTTP status is not inferred. No media files rehosted."
+}
