@@ -1,0 +1,134 @@
+language,series_id,series_name,listed_sets,domain_candidate,audit_date,source_url
+en,misc,Miscellaneous,2,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/misc
+en,base,Base,7,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/base
+en,gym,Gym,2,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/gym
+en,neo,Neo,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/neo
+en,lc,Legendary Collection,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/lc
+en,ecard,E-Card,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/ecard
+en,ex,EX,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/ex
+en,pop,POP,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/pop
+en,tk,Trainer kits,20,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/tk
+en,dp,Diamond & Pearl,8,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/dp
+en,pl,Platinum,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/pl
+en,hgss,HeartGold & SoulSilver,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/hgss
+en,col,Call of Legends,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/col
+en,bw,Black & White,14,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/bw
+en,mc,McDonald's Collection,12,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/mc
+en,xy,XY,17,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/xy
+en,sm,Sun & Moon,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/sm
+en,swsh,Sword & Shield,26,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/swsh
+en,sv,Scarlet & Violet,19,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/sv
+en,tcgp,Pokémon TCG Pocket,15,digital,2026-10-19,https://api.tcgdex.net/v2/en/series/tcgp
+en,me,Mega Evolution,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/en/series/me
+fr,base,Base,6,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/base
+fr,misc,Autre,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/misc
+fr,neo,Neo,4,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/neo
+fr,ecard,e-cards,2,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/ecard
+fr,ex,EX,16,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/ex
+fr,pop,POP,7,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/pop
+fr,tk,Kits du dresseur,20,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/tk
+fr,dp,Diamant & Perle,8,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/dp
+fr,pl,Platine,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/pl
+fr,hgss,HeartGold SoulSilver,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/hgss
+fr,col,L'appel des Légendes,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/col
+fr,bw,Noir & Blanc,13,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/bw
+fr,mc,Collection McDonald's,13,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/mc
+fr,xy,XY,17,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/xy
+fr,sm,Soleil et Lune,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/sm
+fr,swsh,Épée et Bouclier,25,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/swsh
+fr,sv,Écarlate et Violet,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/sv
+fr,tcgp,Jeu de Cartes à Collectionner Pokémon Pocket,15,digital,2026-10-19,https://api.tcgdex.net/v2/fr/series/tcgp
+fr,me,Méga-Évolution,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/fr/series/me
+es,base,Clásica,4,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/base
+es,neo,Neo,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/neo
+es,ex,ex,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/ex
+es,pop,POP,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/pop
+es,tk,Kits de Entrenador,20,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/tk
+es,dp,Diamante & Perla,7,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/dp
+es,pl,Platino,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/pl
+es,hgss,HeartGold SoulSilver,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/hgss
+es,bw,Negro y Blanco,11,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/bw
+es,mc,Colección de McDonald's,6,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/mc
+es,xy,XY,15,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/xy
+es,sm,Sol y Luna,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/sm
+es,swsh,Espada y Escudo,25,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/swsh
+es,sv,Escarlata y Púrpura,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/sv
+es,tcgp,Juego de Cartas Coleccionables Pokémon Pocket,11,digital,2026-10-19,https://api.tcgdex.net/v2/es/series/tcgp
+es,me,Megaevolución,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es/series/me
+es-mx,sv,Escarlata y Púrpura,2,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es-mx/series/sv
+es-mx,me,Megaevolución,9,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/es-mx/series/me
+it,base,Originale,6,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/base
+it,neo,Neo,4,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/neo
+it,ecard,e-Series,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/ecard
+it,ex,EX,15,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/ex
+it,pop,POP,8,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/pop
+it,tk,Trainer Kit,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/tk
+it,dp,Diamante & Perla,8,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/dp
+it,pl,Platino,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/pl
+it,hgss,HeartGold SoulSilver,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/hgss
+it,col,Richiamo delle Leggende,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/col
+it,bw,Nero e Bianco,12,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/bw
+it,mc,McDonald's Collection,12,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/mc
+it,xy,XY,16,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/xy
+it,sm,Sole e Luna,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/sm
+it,swsh,Spada e Scudo,25,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/swsh
+it,sv,Scarlatto e Violetto,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/sv
+it,tcgp,Gioco di Carte Collezionabili Pokémon Pocket,11,digital,2026-10-19,https://api.tcgdex.net/v2/it/series/tcgp
+it,me,Megaevoluzione,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/it/series/me
+pt,base,Coleção Básica,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/base
+pt,ex,EX,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/ex
+pt,dp,Diamante & Pérola,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/dp
+pt,hgss,HeartGold SoulSilver,4,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/hgss
+pt,col,Chamado das Lendas,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/col
+pt,bw,Black & White,12,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/bw
+pt,xy,XY,15,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/xy
+pt,sm,Sol e Lua,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/sm
+pt,swsh,Espada e Escudo,25,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/swsh
+pt,sv,Escarlate e Violeta,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/sv
+pt,tcgp,Pokémon Estampas Ilustradas Pocket,11,digital,2026-10-19,https://api.tcgdex.net/v2/pt/series/tcgp
+pt,me,Megaevolução,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pt/series/me
+pt-br,tcgp,Pokémon Estampas Ilustradas Pocket,11,digital,2026-10-19,https://api.tcgdex.net/v2/pt-br/series/tcgp
+de,base,Grund,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/base
+de,neo,Neo,4,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/neo
+de,ecard,e-Card,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/ecard
+de,ex,EX,15,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/ex
+de,dp,Diamant & Perl,8,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/dp
+de,pl,Platin,4,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/pl
+de,hgss,HeartGold SoulSilver,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/hgss
+de,col,Ruf der Legenden,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/col
+de,bw,Schwarz & Weiß,12,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/bw
+de,xy,XY,16,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/xy
+de,sm,Sonne & Mond,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/sm
+de,swsh,Schwert & Schild,25,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/swsh
+de,sv,Karmesin & Purpur,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/sv
+de,tcgp,Pokémon‑Sammelkartenspiel‑Pocket,11,digital,2026-10-19,https://api.tcgdex.net/v2/de/series/tcgp
+de,me,Mega-Entwicklung,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/de/series/me
+nl,base,Basis,3,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/nl/series/base
+pl,dp,Diament i Perla,2,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/pl/series/dp
+ru,xy,XY,9,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ru/series/xy
+ja,PMCG,ポケットモンスターカードゲーム,6,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/PMCG
+ja,neo,ポケモンカード★neo,4,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/neo
+ja,VS,VS,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/VS
+ja,web,web,1,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/web
+ja,e,ポケモンカードe,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/e
+ja,ADV,ADV,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/ADV
+ja,PCG,PCG,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/PCG
+ja,L,LEGEND,5,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/L
+ja,XY,XY,11,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/XY
+ja,XYb,XY BREAK,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/XYb
+ja,SM,サン＆ムーン,42,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/SM
+ja,S,剣と盾,45,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/S
+ja,M,ポケモンカードゲーム MEGA,10,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/M
+ja,SV,ポケモンカードゲーム スカーレット&バイオレット,29,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ja/series/SV
+ko,SM,썬&문,35,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ko/series/SM
+ko,S,검과 방패,45,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ko/series/S
+ko,SV,스칼렛・바이올렛,15,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/ko/series/SV
+zh-tw,S,劍＆盾,62,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/zh-tw/series/S
+zh-tw,SV,朱&紫系列,36,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/zh-tw/series/SV
+id,SV,Scarlet & Violet,22,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/id/series/SV
+id,S,Pedang & Perisai,48,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/id/series/S
+th,SV,สการ์เล็ต&ไวโอเล็ต,23,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/th/series/SV
+th,S,ซอร์ด แอนด์ ชีลด์,49,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/th/series/S
+zh-cn,SM,太阳&月亮,17,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/zh-cn/series/SM
+zh-cn,S,剑&盾,18,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/zh-cn/series/S
+zh-cn,SV,朱&紫,22,physical_candidate,2026-10-19,https://api.tcgdex.net/v2/zh-cn/series/SV

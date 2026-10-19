@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "PokéVault",
+    "slug": "pokevault",
+    "version": "0.1.0",
+    "scheme": "pokevault",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "platforms": ["ios", "android", "web"],
+    "ios": { "supportsTablet": true },
+    "android": { "predictiveBackGestureEnabled": true },
+    "web": { "bundler": "metro", "output": "static", "name": "PokéVault" },
+    "plugins": ["expo-router"],
+    "experiments": { "typedRoutes": true }
+  }
+}

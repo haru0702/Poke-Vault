@@ -1,0 +1,146 @@
+{
+  "auditDate": "2026-10-19",
+  "note": "DOM visibility and document-width checks, not a native-device test. Horizontal filter scrollers are intentional.",
+  "checks": [
+    {
+      "width": 320,
+      "screen": "Dashboard",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 320,
+      "screen": "Pokédex",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 320,
+      "screen": "Collection",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 320,
+      "screen": "Portfolio",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 320,
+      "screen": "Settings",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 390,
+      "screen": "Dashboard",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 390,
+      "screen": "Pokédex",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 390,
+      "screen": "Collection",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 390,
+      "screen": "Portfolio",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 390,
+      "screen": "Settings",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 768,
+      "screen": "Dashboard",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 768,
+      "screen": "Pokédex",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 768,
+      "screen": "Collection",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 768,
+      "screen": "Portfolio",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 768,
+      "screen": "Settings",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 1440,
+      "screen": "Dashboard",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 1440,
+      "screen": "Pokédex",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 1440,
+      "screen": "Collection",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 1440,
+      "screen": "Portfolio",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 1440,
+      "screen": "Settings",
+      "headingVisible": true,
+      "mockLabelVisible": true,
+      "noDocumentOverflow": true
+    }
+  ]
+}
